@@ -1,0 +1,36 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+  <div class="form-group">
+    <label for="player-name">Player Name</label>
+    <input
+      type="text"
+      id="player-name"
+      class="form-control"
+      ngModel
+      name="playerName"
+      required
+    >
+  </div>
+  <div class="form-group">
+    <label for="room-name">Room Name</label>
+    <input
+      type="text"
+      id="room-name"
+      class="form-control"
+      ngModel
+      name="roomName"
+      required
+    >
+  </div>
+  <button
+    class="btn btn-primary"
+    type="button"
+    (click)="createRoom()"
+    [disabled]="!form.valid"
+  > Create Room </button>
+  <button
+    class="btn btn-primary"
+    type="button"
+    (click)="joinRoom()"
+    [disabled]="!form.valid"
+  > Join Room </button>
+</form>

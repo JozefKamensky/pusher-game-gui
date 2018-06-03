@@ -1,0 +1,22 @@
+<div class="grid-wrapper">
+  <div class="tile center">
+    {{moveData.type}}
+  </div>
+  <div class="tile north">
+    {{moveData.north.type}}
+  </div>
+  <div class="tile south">
+    {{moveData.south.type}}
+  </div>
+  <div class="tile east">
+    {{moveData.east.type}}
+  </div>
+  <div class="tile west">
+    {{moveData.west.type}}
+  </div>
+</div>
+<button
+  class="btn btn-danger"
+  (click)="moveNorth()"
+  type="button"
+> MOVE NORTH </button>

@@ -1,0 +1,40 @@
+div.grid-wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+div.tile {
+  background-color: lightgray;
+  color: black;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+div.center {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+div.north {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+div.south {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+div.east {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+div.west {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}

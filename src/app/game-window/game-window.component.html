@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-9">
+    <!--<app-intro [hidden]="activeWindow !== 'intro'"></app-intro>-->
+    <!--<app-move-window [hidden]="activeWindow !== 'move'"></app-move-window>-->
+    <!--<app-vote-window [hidden]="activeWindow !== 'vote'"></app-vote-window>-->
+
+    <app-intro
+      *ngIf="activeWindow === 'intro'"
+      [introData]="introData"
+    ></app-intro>
+
+    <app-move-window
+      *ngIf="activeWindow === 'move'"
+      [moveData]="moveData"
+    ></app-move-window>
+
+    <app-vote-window
+      *ngIf="activeWindow === 'vote'"
+      [voteData]="voteData"
+    ></app-vote-window>
+
+  </div>
+  <div class="col-xs-12 col-sm-3">
+    <app-player-list></app-player-list>
+  </div>
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <label for="activeWindow">Window</label>
+    <input
+      type="text"
+      id="activeWindow"
+      class="form-control"
+      ngModel
+      name="activeWindow"
+      required
+    >
+    <button type="submit" class="btn btn-success"> Change </button>
+  </form>
+</div>
